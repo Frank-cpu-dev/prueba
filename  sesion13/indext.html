@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Enfermedades Más Comunes</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #fff8f0;
+            color: #5a3e36;
+        }
+
+        section {
+            display: none; /* ocultar todas las secciones */
+            padding: 60px 40px;
+            min-height: 100vh;
+            text-align: center;
+            color: #5a3e36;
+            box-sizing: border-box;
+        }
+
+        section:target {
+            display: block;
+        }
+
+        /* mostrar la primera página si no hay target */
+        body:not(:has(:target)) #intro {
+            display: block;
+        }
+
+        h1, h2 {
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 1.15rem;
+            max-width: 750px;
+            margin: 0 auto 30px;
+            line-height: 1.6;
+        }
+
+        nav {
+            margin-top: 40px; /* separación superior */
+        }
+
+        nav a {
+            display: inline-block;
+            background-color: #f6d8c9;
+            color: #5a3e36;
+            text-decoration: none;
+            padding: 12px 28px;
+            border-radius: 25px;
+            margin: 0 12px;
+            font-weight: 600;
+            box-shadow: 0 4px 8px rgba(246, 216, 201, 0.5);
+            transition: background 0.3s ease, color 0.3s ease;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            background-color: #f1bba6;
+            color: #422819;
+        }
+
+        img, iframe {
+            max-width: 80%;
+            height: auto;
+            margin-top: 25px;
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(246, 216, 201, 0.6);
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+            max-width: 650px;
+            margin: 20px auto 0;
+        }
+
+        ul li {
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 30px;
+            font-weight: 500;
+        }
+
+        ul li::before {
+            content: "⚕️";
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 1.3rem;
+            line-height: 1;
+        }
+
+        /* Colores pastel cálidos para cada slide */
+        #slider1 { background-color: #f7d9d9; }   /* Sarampión - rosa pastel */
+        #slider2 { background-color: #ffe7c7; }   /* COVID-19 - melocotón */
+        #slider3 { background-color: #fff1d6; }   /* Diabetes - amarillo pastel */
+        #slider4 { background-color: #e6d4f0; }   /* Cáncer - lavanda */
+        #slider5 { background-color: #d1e7e0; }   /* VIH - verde menta claro */
+        #slider6 { background-color: #cde6f0; }   /* Gripe - azul claro pastel */
+        #slider7 { background-color: #fce8c8; }   /* Gastritis - crema */
+
+        #intro {
+            background-color: #fce9e1;
+            display: none;
+            padding-top: 40px;
+        }
+
+        /* Video iframe responsive */
+        iframe {
+            width: 80%;
+            max-width: 600px;
+            height: 340px;
+        }
+
+        /* Encabezado de introducción */
+        #intro img {
+            margin-top: 30px;
+            max-width: 350px;
+            border-radius: 20px;
+            box-shadow: 0 8px 18px rgba(252, 232, 225, 0.7);
+        }
+    </style>
+</head>
+<body>
+    <!-- Introducción -->
+    <section id="intro">
+        <h1>Enfermedades Más Comunes</h1>
+        <p>En esta presentación hablaremos sobre algunas de las enfermedades más comunes que afectan a la población mundial. Conoceremos sus causas, síntomas, prevención y tratamientos para estar mejor informados y cuidar nuestra salud y la de quienes nos rodean.</p>
+        <img src="https://www.unensayoparami.org/_next/image?url=https%3A%2F%2Fcontent.unensayoparami.org%2Fwp-content%2Fuploads%2F2024%2F02%2Fenfermedad-poco-frecuente.png&w=3840&q=75" alt="Salud y cuidado" />
+        <nav>
+            <a href="#slider1">Comenzar</a>
+        </nav>
+    </section>
+
+    <!-- Slide 1: Sarampión -->
+    <section id="slider1">
+        <h1>Sarampión</h1>
+        <p>Enfermedad viral altamente contagiosa que causa erupciones cutáneas y fiebre. El sarampión es una enfermedad viral altamente contagiosa que afecta principalmente a niños. Se transmite a través de las gotas respiratorias cuando una persona infectada tose o estornuda. Sus síntomas incluyen fiebre alta, tos, congestión nasal, ojos rojos y manchas blancas en la boca, seguidos de un sarpullido rojo que se extiende por todo el cuerpo. Aunque puede ser grave, especialmente en niños pequeños, la vacunación es la mejor forma de prevención y ha reducido significativamente su incidencia en todo el mundo.</p>
+        <img src="https://acp.org.pe/wp-content/uploads/2019/06/sarampion.jpg" alt="Virus del Sarampión" />
+        <h2>Video: ¿Qué es el Sarampión?</h2>
+        <iframe src="https://www.youtube.com/embed/sbXXcsPIHao?si=zmaOencprO-O4Vi1" title="Video Sarampión" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <nav>
+            <a href="#intro">Volver a introducción</a>
+            <a href="#slider2">Siguiente</a>
+        </nav>
+    </section>
+
+    <!-- Slide 2: COVID-19 -->
+    <section id="slider2">
+        <h2>COVID-19</h2>
+        <p>El COVID-19 es una enfermedad causada por el virus SARS-CoV-2, que se transmite principalmente por gotas respiratorias. Fue identificado por primera vez en 2019 y rápidamente se convirtió en una pandemia global. Sus síntomas varían desde fiebre, tos y dificultad para respirar hasta casos graves que pueden causar neumonía y la muerte. La prevención incluye el uso de mascarillas, distanciamiento social y la vacunación, que ha sido clave para controlar la propagación del virus.</p>
+        <img src="https://barton.pe/wp-content/uploads/2021/12/CLL-COVID-19.jpeg" alt="Virus COVID-19" />
+        <h2>Video: ¿Qué es el COVID-19?</h2>
+        <iframe src="https://www.youtube.com/embed/RL9snN5CeqE?si=46nZWAvLRb3gopWT" title="Video COVID-19" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <nav>
+            <a href="#slider1">Anterior</a>
+            <a href="#slider3">Siguiente</a>
+        </nav>
+    </section>
+
+    <!-- Slide 3: Diabetes -->
+    <section id="slider3">
+        <h2>Diabetes</h2>
+        <p>La diabetes es una enfermedad crónica que afecta la forma en que el cuerpo procesa el azúcar en la sangre (glucosa). Se produce cuando el cuerpo no produce suficiente insulina o no la utiliza adecuadamente, lo que provoca niveles elevados de glucosa. Los principales tipos son la diabetes tipo 1 y tipo 2. Los síntomas incluyen sed excesiva, hambre constante, fatiga y visión borrosa. El control de la diabetes implica una alimentación saludable, ejercicio, monitoreo de la glucosa y, en algunos casos, medicamentos o insulina.</p>
+        <img src="https://www.clivi.com.mx/hs-fs/hubfs/comer-bien-con-diabetes-67894a83de0f3.webp?width=750&height=421&name=comer-bien-con-diabetes-67894a83de0f3.webp" alt="Diabetes" />
+        <h2>Video: ¿Qué es la Diabetes?</h2>
+        <iframe src="https://www.youtube.com/embed/ODF1C-i14XE?si=u_2r9_SlE3d5tAIz" title="Video Diabetes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <nav>
+            <a href="#slider2">Anterior</a>
+            <a href="#slider4">Siguiente</a>
+        </nav>
+    </section>
+
+    <!-- Slide 4: Cáncer -->
+    <section id="slider4">
+        <h2>Cáncer</h2>
+        <p>El cáncer es un conjunto de enfermedades caracterizadas por el crecimiento descontrolado de células anormales que pueden invadir tejidos y órganos. Puede aparecer en casi cualquier parte del cuerpo y existen muchos tipos diferentes. Las causas incluyen factores genéticos, ambientales y estilos de vida. Los síntomas varían según el tipo y la etapa, e incluyen bultos, pérdida de peso y fatiga. El tratamiento puede incluir cirugía, quimioterapia, radioterapia y terapias dirigidas. La detección temprana mejora las chances de éxito en el tratamiento.</p>
+        <img src="https://bago.com.ec/wp-content/uploads/2023/02/cancer.jpg" alt="Cáncer" />
+        <h2>Video: ¿Qué es el Cáncer?</h2>
+        <iframe src="https://www.youtube.com/embed/74vGtHSfCT0?si=KTkBXFwCnmxVEmR6" title="Video Cáncer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <nav>
+            <a href="#slider3">Anterior</a>
+            <a href="#slider5">Siguiente</a>
+        </nav>
+    </section>
+
+    <!-- Slide 5: VIH -->
+    <section id="slider5">
+        <h2>VIH</h2>
+        <p>El VIH (Virus de Inmunodeficiencia Humana) es un virus que ataca el sistema inmunológico, debilitando la capacidad del cuerpo para defenderse de infecciones. Se transmite principalmente por contacto con sangre, fluidos sexuales o de madre a hijo durante el embarazo, parto o lactancia. Si no se trata, el VIH puede avanzar a SIDA, la etapa más grave de la infección. Aunque no tiene cura, existen tratamientos antirretrovirales que permiten a las personas vivir una vida larga y saludable controlando el virus.</p>
+        <img src="https://medlineplus.gov/images/HIV_share.png" alt="VIH" />
+        <h2>Video: ¿Qué es el VIH?</h2>
+        <iframe src="https://www.youtube.com/embed/_tmd0j3AyE4?si=93f6Zd2TMWvZGk9X" title="Video VIH" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <nav>
+            <a href="#slider4">Anterior</a>
+            <a href="#slider6">Siguiente</a>
+        </nav>
+    </section>
+
+    <!-- Slide 6: Gripe -->
+    <section id="slider6">
+        <h2>Gripe</h2>
+        <p>La gripe es una infección respiratoria causada por el virus influenza. Se transmite fácilmente de persona a persona a través de gotas al toser, estornudar o hablar. Sus síntomas incluyen fiebre, tos, dolor de garganta, congestión nasal, dolores musculares y fatiga. Aunque suele ser leve, puede ser grave en personas mayores, niños pequeños y personas con enfermedades crónicas. La vacunación anual es la mejor forma de prevenirla y reducir complicaciones.</p>
+        <img src="https://images.theconversation.com/files/311131/original/file-20200121-117907-194ds3f.jpg?ixlib=rb-4.1.0&rect=11%2C0%2C7304%2C4891&q=20&auto=format&w=320&fit=clip&dpr=2&usm=12&cs=strip" alt="Gripe" />
+        <h2>Video: ¿Qué es la Gripe?</h2>
+        <iframe src="https://www.youtube.com/embed/jSzc7wHNKCc?si=2LurfIiWPWLKD_NH" title="Video Gripe" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <nav>
+            <a href="#slider5">Anterior</a>
+            <a href="#slider7">Siguiente</a>
+        </nav>
+    </section>
+
+    <!-- Slide 7: Gastritis -->
+    <section id="slider7">
+        <h2>Gastritis</h2>
+        <p>La gastritis es la inflamación del revestimiento del estómago, que puede causar dolor abdominal, náuseas, vómitos y sensación de ardor. Puede ser causada por infecciones, consumo excesivo de alcohol, estrés, medicamentos o mala alimentación. El tratamiento incluye cambios en la dieta, medicamentos para reducir el ácido estomacal y, en algunos casos, antibióticos si hay infección.</p>
+        <img src="https://www.sanpablo.com.pe/wp-content/uploads/2024/05/Banner-sintomas-de-gastritis.jpg" alt="Gastritis" />
+        <h2>Video: ¿Qué es la Gastritis?</h2>
+        <iframe src="https://www.youtube.com/embed/ZSHNZW61h70?si=lrFvVikXerM6QU6W" title="Video Gastritis" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <nav>
+            <a href="#slider6">Anterior</a>
+            <a href="#intro">Volver a introducción</a>
+        </nav>
+    </section>
+</body>
+</html>
